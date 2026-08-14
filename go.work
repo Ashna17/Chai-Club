@@ -1,0 +1,9 @@
+go 1.26.1
+
+use (
+	./services/community-service
+	./services/matching-service
+	./services/reward-service
+	./services/user-service
+	./shared
+)
