@@ -1,10 +1,14 @@
 # TBB Chai Club
 
+TBB stands for The Brown Brew. This project is the community-building platform behind The Brown Brew, a company focused on bringing together chai lovers and creating warm, meaningful connection through community.
+
 TBB Chai Club is a community-driven platform for chai lovers to meet, connect, and build meaningful local relationships. The idea is inspired by the spirit of a social club: a welcoming space where people can come together over tea, conversation, and shared experiences.
 
-The project is starting in Munich, with the goal of helping people find like-minded friends, conversations, and casual meetups in a warm and low-pressure way.
+The project is starting in Munich, with the goal of helping people find like-minded friends, conversations, and casual meetups in a warm and low-pressure way. It is rooted in the mission of The Brown Brew: to build a space for people who love chai, connection, and community.
 
 ## Mission
+
+The Brown Brew is built around the idea that chai is more than a drink — it is a ritual of hospitality, creativity, and human connection. TBB Chai Club brings that philosophy into a digital community where people can meet, learn, and share.
 
 We want to create an easy and human way for people to:
 
