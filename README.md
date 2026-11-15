@@ -69,18 +69,27 @@ This repo is structured as a microservice-based application with:
 
 ## Stack
 
-- Go for backend services
-- Python for ML/embedding service
-- FastAPI for the ML sidecar
+- Python and FastAPI for backend services
+- Python for the ML/embedding service
+- PostgreSQL drivers and pgvector Python support
 - PostgreSQL + PostGIS + pgvector for location and semantic matching
 - Docker for local environment setup
 
 ## Getting started
 
-1. Start the local database with Docker Compose.
-2. Run the matching service and supporting services.
-3. Use the app flow to create or search for connect profiles.
-4. Match nearby users based on topic and location.
+Create a Python environment, install the project dependencies, and start the database and matching API:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+docker compose -f deployments/docker-compose.yml up --build -d
+uvicorn matching_service.main:app --reload --app-dir services/matching-service
+```
+
+The matching API currently exposes `GET /health`. The matching request and response models are in `services/matching-service/matching_service/domain/match.py`.
+
+The previous Go module directories for user, community, reward, and shared code contained no Go source files, so there was no service behavior in those modules to port. They can be implemented as Python packages when those services are developed.
 
 ## Future direction
 
