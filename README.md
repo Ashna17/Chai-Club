@@ -80,12 +80,16 @@ This repo is structured as a microservice-based application with:
 Create a Python environment, install the project dependencies, and start the database and matching API:
 
 ```bash
+cp .env.example .env
+# Edit .env and set a private local database password.
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e ".[dev]"
-docker compose -f deployments/docker-compose.yml up --build -d
+docker compose --env-file .env -f deployments/docker-compose.yml up --build -d
 uvicorn matching_service.main:app --reload --app-dir services/matching-service
 ```
+
+Do not commit `.env`; it is excluded by `.gitignore`. Keep real production credentials in your deployment platform's secret manager instead of a checked-in file.
 
 The matching API currently exposes `GET /health`. The matching request and response models are in `services/matching-service/matching_service/domain/match.py`.
 
