@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="TBB Chai Club Matching Service")
+app = FastAPI(title="Chai Club Matching Service")
 
 
 @app.get("/health")
